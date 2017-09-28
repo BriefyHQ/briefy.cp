@@ -1,0 +1,9 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n_domain="briefy.cp">
+
+    <include package="plone.behavior" file="meta.zcml" />
+
+</configure>

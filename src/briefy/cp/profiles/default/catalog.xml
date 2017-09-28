@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+ <index name="Subject" meta_type="KeywordIndex">
+  <indexed_attr value="Subject"/>
+ </index>
+ <index name="locality" meta_type="FieldIndex">
+  <indexed_attr value="locality"/>
+ </index>
+ <index name="country" meta_type="FieldIndex">
+  <indexed_attr value="country"/>
+ </index>
+ <index name="accommodation_type" meta_type="FieldIndex">
+  <indexed_attr value="accommodation_type"/>
+ </index>
+ <index name="stars" meta_type="FieldIndex">
+  <indexed_attr value="stars"/>
+ </index>
+</object>

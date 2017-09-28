@@ -1,0 +1,114 @@
+<model xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="email" type="plone.schema.email.Email">
+      <description>Public email for this accommodation.</description>
+      <required>False</required>
+      <title>Email</title>
+    </field>
+    <field name="url" type="zope.schema.URI">
+      <description>Site address.</description>
+      <required>False</required>
+      <title>Site</title>
+    </field>
+    <fieldset name="address" label="Address" description="Address information">
+      <field name="route" type="zope.schema.TextLine">
+        <description>i.e. Oranienstrasse</description>
+        <required>False</required>
+        <title>Address</title>
+      </field>
+      <field name="number" type="zope.schema.TextLine">
+        <description>i.e: 32</description>
+        <required>False</required>
+        <title>Number</title>
+      </field>
+      <field name="sub_locality" type="zope.schema.TextLine">
+        <description>i.e. Kreuzberg</description>
+        <required>False</required>
+        <title>Neighbourhood</title>
+      </field>
+      <field name="locality" type="zope.schema.Choice">
+        <description/>
+        <required>False</required>
+        <title>City</title>
+        <values>
+          <element key="ber">Berlin</element>
+        </values>
+      </field>
+      <field name="country" type="zope.schema.Choice">
+        <description/>
+        <required>False</required>
+        <title>Country</title>
+        <values>
+          <element key="DE">Germany</element>
+        </values>
+      </field>
+    </fieldset>
+    <fieldset name="contact_info" label="Contact Person" description="Contact Information">
+      <field name="fullname" type="zope.schema.TextLine">
+        <description>i.e. Max Musterman</description>
+        <required>False</required>
+        <title>Contact Name</title>
+      </field>
+      <field name="contact_email" type="plone.schema.email.Email">
+        <description/>
+        <required>False</required>
+        <title>Email</title>
+      </field>
+      <field name="phone" type="zope.schema.TextLine">
+        <description>i.e.: +4917637755722</description>
+        <required>False</required>
+        <title>Phone</title>
+      </field>
+      <field name="contact_title" type="zope.schema.TextLine">
+        <description>i.e.: General Manager</description>
+        <required>False</required>
+        <title>Contact title</title>
+      </field>
+    </fieldset>
+    <fieldset name="metadata" label="Metadata" description="Metadata">
+      <field name="accommodation_type" type="zope.schema.Choice">
+        <description>Type of this accommodation</description>
+        <title>Type</title>
+        <vocabulary>briefy.cp.vocabularies.AccommodationTypes</vocabulary>
+      </field>
+      <field name="chain_name" type="zope.schema.TextLine">
+        <description/>
+        <required>False</required>
+        <title>Chain name</title>
+      </field>
+      <field name="stars" type="zope.schema.Choice">
+        <description/>
+        <required>False</required>
+        <title>Stars</title>
+        <vocabulary>briefy.cp.vocabularies.AccommodationStars</vocabulary>
+      </field>
+      <field name="rating" type="zope.schema.Int">
+        <description>External user rating (0-100)</description>
+        <max>100</max>
+        <min>0</min>
+        <required>False</required>
+        <title>Rating</title>
+      </field>
+    </fieldset>
+    <fieldset name="requirement_items" label="Categories" description="Categories">
+      <field name="requirement_items" type="zope.schema.List">
+        <description/>
+        <title>Categories to shoot</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>briefy.cp.content.accommodation.IRequirementItemSchema</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
+      </field>
+    </fieldset>
+    <fieldset name="external_info" label="External Info" description="This in other sites">
+      <field name="partners" type="zope.schema.List">
+        <description/>
+        <title>Partner Information</title>
+        <value_type type="collective.z3cform.datagridfield.DictRow">
+          <schema>briefy.cp.content.accommodation.IExternalParterLinkSchema</schema>
+        </value_type>
+        <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
+      </field>
+    </fieldset>
+  </schema>
+</model>

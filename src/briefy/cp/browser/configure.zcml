@@ -1,0 +1,40 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+    <!-- Static Resources-->
+    <browser:resourceDirectory
+        name="briefy.cp"
+        directory="static"
+    />
+
+  <!-- Login -->
+  <browser:page
+      class=".authomatic.AuthomaticView"
+      for="*"
+      layer="briefy.cp.interfaces.IBriefyPloneLayer"
+      name="authomatic-handler"
+      permission="zope2.View"
+  />
+
+  <browser:page
+      for="briefy.cp.content.city.ICity"
+      name="view"
+      class=".city.CityView"
+      template="city.pt"
+      permission="zope2.View"
+      layer="briefy.cp.interfaces.IBriefyPloneLayer"
+      />
+
+  <browser:page
+      for="briefy.cp.content.accommodation.IAccommodation"
+      name="view"
+      class=".accommodation.AccommodationView"
+      template="accommodation.pt"
+      permission="zope2.View"
+      layer="briefy.cp.interfaces.IBriefyPloneLayer"
+      />
+
+</configure>

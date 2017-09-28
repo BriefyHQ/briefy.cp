@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+ <rolemap>
+   <permissions>
+     <permission name="Briefy: Add City" acquire="False">
+       <role name="Manager"/>
+     </permission>
+     <permission name="Briefy: Add Accommodation" acquire="False">
+       <role name="Editor"/>
+       <role name="Reviewer"/>
+       <role name="Manager"/>
+     </permission>
+   </permissions>
+ </rolemap>

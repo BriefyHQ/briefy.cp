@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+             i18n:domain="plone"
+             workflow_id="accommodation_workflow"
+             title="Accomodation Workflow"
+             description="Accommodation Workflow"
+             state_variable="review_state"
+             initial_state="not_started"
+             i18n:attributes="title; description">
+
+ <permission>Access contents information</permission>
+ <permission>Modify portal content</permission>
+ <permission>View</permission>
+
+ <state state_id="not_started" title="Not Started" i18n:attributes="title">
+    <description i18n:translate="">Not started</description>
+    <exit-transition transition_id="start"/>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+ <state state_id="in_progress" title="In Progress" i18n:attributes="title">
+    <description i18n:translate="">In progress</description>
+    <exit-transition transition_id="skip"/>
+    <exit-transition transition_id="reject"/>
+    <exit-transition transition_id="accept"/>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+ <state state_id="skipped" title="Skipped" i18n:attributes="title">
+    <description i18n:translate="">Skipped</description>
+    <exit-transition transition_id="start"/>
+    <exit-transition transition_id="reject"/>
+    <exit-transition transition_id="accept"/>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+ <state state_id="rejected" title="Rejected" i18n:attributes="title">
+    <description i18n:translate="">Rejected</description>
+    <exit-transition transition_id="start"/>
+    <exit-transition transition_id="accept"/>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+ <state state_id="accepted" title="Accepted" i18n:attributes="title">
+    <description i18n:translate="">Accepted</description>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+ <state state_id="scheduled" title="Scheduled" i18n:attributes="title">
+    <description i18n:translate="">Scheduled</description>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+ <state state_id="delivered" title="Delivered" i18n:attributes="title">
+    <description i18n:translate="">Delivered</description>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+  <transition 
+    transition_id="start"
+    new_state="in_progress"
+    title="Start negotiation"
+    trigger="USER"
+    before_script="" after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Start negotiation.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=start" category="workflow" i18n:translate="">Start</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+  <transition 
+    transition_id="skip"
+    new_state="skipped"
+    title="Skip negotiation"
+    trigger="USER"
+    before_script=""
+    after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Skip negotiation.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=skip" category="workflow" i18n:translate="">Skip</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+  <transition 
+    transition_id="reject"
+    new_state="rejected"
+    title="Hotel Rejected"
+    trigger="USER"
+    before_script=""
+    after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Reject negotiation.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=reject" category="workflow" i18n:translate="">Hotel rejected</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+  <transition 
+    transition_id="accept"
+    new_state="accepted"
+    title="Hotel Accepted"
+    trigger="USER"
+    before_script=""
+    after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Hotel Accepted.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=accept" category="workflow" i18n:translate="">Hotel accepted</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+ <variable variable_id="action" for_catalog="False" for_status="True" update_always="True">
+  <description i18n:translate="">Previous transition</description>
+  <default>
+   <expression>transition/getId|nothing</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="actor" for_catalog="False" for_status="True" update_always="True">
+  <description i18n:translate="">
+    The ID of the user who performed the previous transition
+  </description>
+  <default>
+   <expression>user/getId</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="comments" for_catalog="False" for_status="True" update_always="True">
+  <description i18n:translate="">
+    Comment about the last transition
+  </description>
+  <default>
+   <expression>python:state_change.kwargs.get('comment', '')</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="review_history" for_catalog="False" for_status="False" update_always="False">
+  <description i18n:translate="">
+    Provides access to workflow history
+  </description>
+  <default>
+   <expression>state_change/getHistory</expression>
+  </default>
+  <guard>
+   <guard-permission>Request review</guard-permission>
+   <guard-permission>Review portal content</guard-permission>
+  </guard>
+ </variable>
+ <variable variable_id="time" for_catalog="False" for_status="True" update_always="True">
+  <description i18n:translate="">
+    When the previous transition was performed
+  </description>
+  <default>
+   <expression>state_change/getDateTime</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+
+</dc-workflow>

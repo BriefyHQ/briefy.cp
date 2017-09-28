@@ -1,0 +1,32 @@
+<configure
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n_domain="briefy.cp">
+
+    <include package="plone.app.contenttypes" />
+    <include package="plone.restapi" />
+    <include package='plone.app.contenttypes' />
+
+    <include file='permissions.zcml' />
+    <include file='profiles.zcml' />
+
+    <include package='.traversal' />
+    <include package='.browser' />
+    <include package='.behaviors' />
+    <include package='.content' />
+
+    <include package='.vocabularies' />
+
+    <plone:CORSPolicy
+      allow_origin="*"
+      allow_methods="*"
+      allow_credentials="true"
+      expose_headers="Content-Length"
+      allow_headers="Accept,Content-Type,X-Locale"
+      max_age="3600"
+    />
+
+    <plone:static name="briefy" directory="theme" type="theme" />
+
+</configure>

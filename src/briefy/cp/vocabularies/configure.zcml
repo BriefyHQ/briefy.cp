@@ -1,0 +1,22 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <utility
+    component=".RequirementItemsTagsVocabularyFactory"
+    name="briefy.cp.vocabularies.RequirementItemsTags"
+    />
+  <utility
+    component=".AccommodationTypesVocabularyFactory"
+    name="briefy.cp.vocabularies.AccommodationTypes"
+    />
+  <utility
+    component=".AccommodationStatesVocabularyFactory"
+    name="briefy.cp.vocabularies.AccommodationStates"
+    />
+  <utility
+    component=".AccommodationStarsVocabularyFactory"
+    name="briefy.cp.vocabularies.AccommodationStars"
+    />
+
+</configure>

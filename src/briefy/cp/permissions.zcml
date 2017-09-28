@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="briefy.cp">
+
+  <permission
+    id="briefy.cp.AddCity"
+    title="Briefy: Add City"
+    />
+  <permission
+    id="briefy.cp.AddAccommodation"
+    title="Briefy: Add Accommodation"
+    />
+
+
+</configure>

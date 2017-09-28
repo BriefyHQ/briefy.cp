@@ -1,0 +1,389 @@
+<registry>
+  <record name="Products.CMFPlone.i18nl10n.override_dateformat.Enabled">
+    <field type="plone.registry.field.Bool">
+      <description>Override the translation machinery</description>
+      <title>Enabled</title>
+    </field>
+    <value>True</value>
+  </record>
+  <record name="Products.CMFPlone.i18nl10n.override_dateformat.date_format_long">
+    <field type="plone.registry.field.ASCIILine">
+      <description>Default value: %Y-%m-%d %H:%M (2038-01-19 03:14)</description>
+      <title>old ZMI property: localLongTimeFormat</title>
+    </field>
+    <value>%Y-%m-%d %H:%M</value>
+  </record>
+  <record name="Products.CMFPlone.i18nl10n.override_dateformat.date_format_short">
+    <field type="plone.registry.field.ASCIILine">
+      <description>Default value: %Y-%m-%d (2038-01-19)</description>
+      <title>old ZMI property: localTimeFormat</title>
+    </field>
+    <value>%Y-%m-%d</value>
+  </record>
+  <record name="Products.CMFPlone.i18nl10n.override_dateformat.time_format">
+    <field type="plone.registry.field.ASCIILine">
+      <description>Default value: %H:%M (03:14)</description>
+      <title>old ZMI property: localTimeOnlyFormat</title>
+    </field>
+    <value>%H:%M</value>
+  </record>
+  <record name="plone.app.discussion.interfaces.IDiscussionSettings.globally_enabled" interface="plone.app.discussion.interfaces.IDiscussionSettings" field="globally_enabled">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_globally_enabled">If selected, users are able to post comments on the site. However, you will still need to enable comments for specific content types, folders or content objects before users will be able to post comments.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="label_globally_enabled">Globally enable comments</title>
+    </field>
+    <value>True</value>
+  </record>
+
+  <record name="plone.app.querystring.field.accommodation_type.description" interface="plone.app.querystring.interfaces.IQueryField" field="description">
+    <field type="plone.registry.field.Text">
+      <title>Description</title>
+    </field>
+    <value xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Type of accommodation</value>
+  </record>
+  <record name="plone.app.querystring.field.accommodation_type.enabled" interface="plone.app.querystring.interfaces.IQueryField" field="enabled">
+    <field type="plone.registry.field.Bool">
+      <title>Enabled</title>
+    </field>
+    <value>True</value>
+  </record>
+  <record name="plone.app.querystring.field.accommodation_type.group" interface="plone.app.querystring.interfaces.IQueryField" field="group">
+    <field type="plone.registry.field.TextLine">
+      <title>Group</title>
+    </field>
+    <value xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Metadata</value>
+  </record>
+  <record name="plone.app.querystring.field.accommodation_type.operations" interface="plone.app.querystring.interfaces.IQueryField" field="operations">
+    <field type="plone.registry.field.List">
+      <title>Operations</title>
+      <value_type type="plone.registry.field.DottedName">
+        <title>Operation ID</title>
+      </value_type>
+    </field>
+    <value>
+      <element>plone.app.querystring.operation.selection.any</element>
+    </value>
+  </record>
+  <record name="plone.app.querystring.field.accommodation_type.sortable" interface="plone.app.querystring.interfaces.IQueryField" field="sortable">
+    <field type="plone.registry.field.Bool">
+      <title>Sortable</title>
+    </field>
+    <value>False</value>
+  </record>
+  <record name="plone.app.querystring.field.accommodation_type.title" interface="plone.app.querystring.interfaces.IQueryField" field="title">
+    <field type="plone.registry.field.TextLine">
+      <title>Title</title>
+    </field>
+    <value xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Accommodation Type</value>
+  </record>
+  <record name="plone.app.querystring.field.accommodation_type.vocabulary" interface="plone.app.querystring.interfaces.IQueryField" field="vocabulary">
+    <field type="plone.registry.field.TextLine">
+      <title>Vocabulary</title>
+    </field>
+    <value>briefy.cp.vocabularies.AccommodationTypes</value>
+  </record>
+
+  <record name="plone.app.theming.interfaces.IThemeSettings.absolutePrefix" interface="plone.app.theming.interfaces.IThemeSettings" field="absolutePrefix">
+    <field type="plone.registry.field.TextLine">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="convert_relative_url">Convert relative URLs in the theme file to absolute paths using this prefix.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="absolute_url_prefix">Absolute URL prefix</title>
+    </field>
+    <value>/++theme++briefy</value>
+  </record>
+  <record name="plone.app.theming.interfaces.IThemeSettings.currentTheme" interface="plone.app.theming.interfaces.IThemeSettings" field="currentTheme">
+    <field type="plone.registry.field.TextLine">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="current_theme_description">The name of the current theme, i.e. the one applied most recently.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="current_theme">Current theme</title>
+    </field>
+    <value>briefy</value>
+  </record>
+  <record name="plone.app.theming.interfaces.IThemeSettings.doctype" interface="plone.app.theming.interfaces.IThemeSettings" field="doctype">
+    <field type="plone.registry.field.ASCIILine">
+      <default></default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="doctype_description">You can specify a Doctype string which will be set on the for example "&lt;!DOCTYPE html&gt;". If left blank the default XHTML 1.0 transitional Doctype or that set in the Diazo theme is used.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="doctype">Doctype</title>
+    </field>
+    <value></value>
+  </record>
+  <record name="plone.app.theming.interfaces.IThemeSettings.enabled" interface="plone.app.theming.interfaces.IThemeSettings" field="enabled">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="enable_theme_globally">Use this option to enable or disable the theme globally. Note that the options will also affect whether the theme is used when this option is enabled.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="enabled">Enabled</title>
+    </field>
+    <value>True</value>
+  </record>
+  <record name="plone.app.theming.interfaces.IThemeSettings.hostnameBlacklist" interface="plone.app.theming.interfaces.IThemeSettings" field="hostnameBlacklist">
+    <field type="plone.registry.field.List">
+      <default>
+        <element>127.0.0.1</element>
+      </default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="hostname_blacklist_description">If there are hostnames that you do not want to be themed, you can list them here. This is useful during theme development, so that you can compare the themed and unthemed sites. In some cases, you may also want to provided an unthemed host alias for content administrators to be able to use 'plain' Plone.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="hostname_blacklist">Unthemed host names</title>
+      <value_type type="plone.registry.field.TextLine"/>
+    </field>
+    <value>
+      <element>127.0.0.1</element>
+    </value>
+  </record>
+  <record name="plone.app.theming.interfaces.IThemeSettings.parameterExpressions" interface="plone.app.theming.interfaces.IThemeSettings" field="parameterExpressions">
+    <field type="plone.registry.field.Dict">
+      <default/>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="parameter_expressions_description">You can define parameters here, which will be passed to the compiled theme. In your rules file, you can refer to a parameter by $name. Parameters are defined using TALES expressions, which should evaluate to a string, a number, a boolean or None. Available variables are `context`, `request`, `portal`, `portal_state`,  and `context_state`.</description>
+      <key_type type="plone.registry.field.ASCIILine"/>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="parameter_expressions">Parameter expressions</title>
+      <value_type type="plone.registry.field.ASCIILine"/>
+    </field>
+    <value/>
+  </record>
+  <record name="plone.app.theming.interfaces.IThemeSettings.readNetwork" interface="plone.app.theming.interfaces.IThemeSettings" field="readNetwork">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="network_urls_allowed">If enabled, network (http, https) urls are allowed in the rules file and this config.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="readNetwork">Read network</title>
+    </field>
+    <value>False</value>
+  </record>
+  <record name="plone.app.theming.interfaces.IThemeSettings.rules" interface="plone.app.theming.interfaces.IThemeSettings" field="rules">
+    <field type="plone.registry.field.TextLine">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="rules_file_path">File path to the rules file</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="rules_file">Rules file</title>
+    </field>
+    <value>/++theme++briefy/rules.xml</value>
+  </record>
+  <record name="plone.auth_cookie_length" interface="Products.CMFPlone.interfaces.controlpanel.ILoginSchema" field="auth_cookie_length">
+    <field type="plone.registry.field.Int">
+      <default>0</default>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Auth cookie length</title>
+    </field>
+    <value>0</value>
+  </record>
+  <record name="plone.available_timezones" interface="Products.CMFPlone.interfaces.controlpanel.IDateAndTimeSchema" field="available_timezones">
+    <field type="plone.registry.field.List">
+      <default/>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_available_timezones">The timezones, which should be available for the portal. Can be set for users and events</description>
+      <missing_value/>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Available timezones</title>
+      <value_type type="plone.registry.field.Choice">
+        <vocabulary>plone.app.vocabularies.Timezones</vocabulary>
+      </value_type>
+    </field>
+    <value>
+      <element>Europe/Berlin</element>
+    </value>
+  </record>
+
+  <record name="plone.default_language" interface="Products.CMFPlone.interfaces.controlpanel.ILanguageSchema" field="default_language">
+    <field type="plone.registry.field.Choice">
+      <default>en</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="description_site_language">The language used for the content and the UI of this site.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="heading_site_language">Site language</title>
+      <vocabulary>plone.app.vocabularies.AvailableContentLanguages</vocabulary>
+    </field>
+    <value>en-us</value>
+  </record>
+  <record name="plone.display_publication_date_in_byline" interface="Products.CMFPlone.interfaces.controlpanel.ISiteSchema" field="display_publication_date_in_byline">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Show the date a content item was published in the byline.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Display publication date</title>
+    </field>
+    <value>True</value>
+  </record>
+  <record name="plone.displayed_types" interface="Products.CMFPlone.interfaces.controlpanel.INavigationSchema" field="displayed_types">
+    <field type="plone.registry.field.Tuple">
+      <default>
+        <element>Image</element>
+        <element>File</element>
+        <element>Link</element>
+        <element>News Item</element>
+        <element>Folder</element>
+        <element>Document</element>
+        <element>Event</element>
+      </default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">The content types that should be shown in the navigation and site map.</description>
+      <missing_value/>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Displayed content types</title>
+      <value_type type="plone.registry.field.Choice">
+        <vocabulary>plone.app.vocabularies.ReallyUserFriendlyTypes</vocabulary>
+      </value_type>
+    </field>
+    <value>
+      <element>city</element>
+      <element>Event</element>
+      <element>File</element>
+      <element>Folder</element>
+      <element>Image</element>
+      <element>Link</element>
+      <element>News Item</element>
+      <element>Document</element>
+    </value>
+  </record>
+  <record name="plone.enable_livesearch" interface="Products.CMFPlone.interfaces.controlpanel.ISearchSchema" field="enable_livesearch">
+    <field type="plone.registry.field.Bool">
+      <default>True</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Enables the LiveSearch feature, which shows live results if the browser supports JavaScript.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Enable LiveSearch</title>
+    </field>
+    <value>True</value>
+  </record>
+  <record name="plone.enable_self_reg" interface="Products.CMFPlone.interfaces.controlpanel.ISecuritySchema" field="enable_self_reg">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Allows users to register themselves on the site. If not selected, only site managers can add new users.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Enable self-registration</title>
+    </field>
+    <value>False</value>
+  </record>
+  <record name="plone.enable_user_pwd_choice" interface="Products.CMFPlone.interfaces.controlpanel.ISecuritySchema" field="enable_user_pwd_choice">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">If not selected, a URL will be generated and e-mailed. Users are instructed to follow the link to reach a page where they can change their password and complete the registration process; this also verifies that they have entered a valid email address.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Let users select their own passwords</title>
+    </field>
+    <value>True</value>
+  </record>
+  <record name="plone.entity_encoding" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="entity_encoding">
+    <field type="plone.registry.field.Choice">
+      <default>raw</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">This option controls how entities/characters get processed. Named: Characters will be converted into named entities based on the entities option. Numeric: Characters will be converted into numeric entities. Raw: All characters will be stored in non-entity form except these XML default entities: amp lt gt quot</description>
+      <missing_value>set([])</missing_value>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Entity encoding</title>
+      <values>
+        <element>named</element>
+        <element>numeric</element>
+        <element>raw</element>
+      </values>
+    </field>
+    <value>raw</value>
+  </record>
+  <record name="plone.external_links_open_new_window" interface="Products.CMFPlone.interfaces.controlpanel.ILinkSchema" field="external_links_open_new_window">
+    <value>True</value>
+  </record>
+  <record name="plone.lessvariables">
+    <field type="plone.registry.field.Dict">
+      <description>Variables that are going to be compiled on less</description>
+      <key_type type="plone.registry.field.ASCIILine"/>
+      <title>Less variables</title>
+      <value_type type="plone.registry.field.TextLine"/>
+    </field>
+    <value>
+      <element key="plone-toolbar-font-primary">sans-serif</element>
+      <element key="plone-toolbar-private-color">rgb(196,24,60)</element>
+      <element key="plone-left-toolbar-expanded">120px</element>
+      <element key="plone-screen-sm-min">768px</element>
+      <element key="plone-toolbar-submenu-header-color">lighten(#000, 80%)</element>
+      <element key="plone-toolbar-published-color">{plone-link-color}</element>
+      <element key="mockuplessPath">\"{site_url}/++resource++mockupless/\"</element>
+      <element key="bowerPath">\"{site_url}/++plone++static/components/\"</element>
+      <element key="plone-link-color">rgba(0,123,179,1)</element>
+      <element key="plone-toolbar-internally-published-color">rgb(136,61,250)</element>
+      <element key="plone-container-lg">1170px</element>
+      <element key="plone-toolbar-submenu-text-color">lighten(#000, 90%)</element>
+      <element key="plone-toolbar-internal-color">rgb(250,184,42)</element>
+      <element key="mockupPath">\"{site_url}/++resource++mockup/\"</element>
+      <element key="plone-screen-sm-max">(@plone-screen-md-min + 1)</element>
+      <element key="plone-screen-md-min">992px</element>
+      <element key="plone-container-sm">750px</element>
+      <element key="plone-screen-lg-min">1200px</element>
+      <element key="plone-left-toolbar">60px</element>
+      <element key="plone-screen-md-max">(@plone-screen-lg-min + 1)</element>
+      <element key="plone-toolbar-font-secundary">sans-serif</element>
+      <element key="plone-gray-lighter">lighten(#000, 80%)</element>
+      <element key="plone-toolbar-pending-color">rgb(226,231,33)</element>
+      <element key="plone-toolbar-separator-color">rgba(255,255,255,.17)</element>
+      <element key="plone-toolbar-text-color">rgba(255,255,255,1)</element>
+      <element key="plone-screen-xs-min">480px</element>
+      <element key="plone-toolbar-submenu-bg">rgba(20,20,20,.9)</element>
+      <element key="plone-screen-xs-max">(@plone-screen-sm-min + 1)</element>
+      <element key="plone-container-md">970px</element>
+      <element key="plone-toolbar-draft-color">rgb(250,184,42)</element>
+      <element key="plone-toolbar-link">{plone-link-color}</element>
+      <element key="icon-font-path">\"../fonts/\"</element>
+      <element key="plone-toolbar-bg">rgba(0,0,0,.9)</element>
+      <element key="plone-gray-light">lighten(#000, 46.5%)</element>
+    </value>
+  </record>
+  <record name="plone.portal_timezone" interface="Products.CMFPlone.interfaces.controlpanel.IDateAndTimeSchema" field="portal_timezone">
+    <field type="plone.registry.field.Choice">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_portal_timezone">The timezone setting of the portal. Users can set their own timezone, if available timezones are defined.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Portal default timezone</title>
+      <vocabulary>plone.app.vocabularies.CommonTimezones</vocabulary>
+    </field>
+    <value>Europe/Berlin</value>
+  </record>
+  <record name="plone.search_results_description_length" interface="Products.CMFPlone.interfaces.controlpanel.ISearchSchema" field="search_results_description_length">
+    <field type="plone.registry.field.Int">
+      <default>160</default>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Crop the item description in search result listings after a number of characters.</title>
+    </field>
+    <value>160</value>
+  </record>
+  <record name="plone.site_logo" interface="Products.CMFPlone.interfaces.controlpanel.ISiteSchema" field="site_logo">
+    <value>filenameb64:bG9nb19icmllZnlfMTAwcHggY29weS5wbmc=;datab64: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</value>
+  </record>
+  <record name="plone.site_title" interface="Products.CMFPlone.interfaces.controlpanel.ISiteSchema" field="site_title">
+    <field type="plone.registry.field.TextLine">
+      <default>Plone site</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">This shows up in the title bar of browsers and in syndication feeds.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Site title</title>
+    </field>
+    <value>Hotels Management</value>
+  </record>
+
+  <record name="plone.use_email_as_login" interface="Products.CMFPlone.interfaces.controlpanel.ISecuritySchema" field="use_email_as_login">
+    <value>True</value>
+  </record>
+
+  <record name="pas.plugins.authomatic.interfaces.IPasPluginsAuthomaticSettings.json_config" interface="pas.plugins.authomatic.interfaces.IPasPluginsAuthomaticSettings" field="json_config">
+    <value>{&#13;
+    "google": {&#13;
+        "display": {&#13;
+            "title": "Google",&#13;
+            "cssclasses": {&#13;
+                "button": "plone-btn plone-btn-default",&#13;
+                "icon": "glypicon glyphicon-google"&#13;
+            },&#13;
+            "as_form": false&#13;
+        },&#13;
+        "propertymap": {&#13;
+            "email": "email",&#13;
+            "link": "home_page",&#13;
+            "locale": "language",&#13;
+            "name": "fullname",&#13;
+            "picture": "portrait"&#13;
+        },&#13;
+        "class_": "authomatic.providers.oauth2.Google",&#13;
+        "consumer_key": "591015123206-oeualbhd4soq0omfjhsaabq91rr82i82.apps.googleusercontent.com",&#13;
+        "consumer_secret": "io9x6ZRFOcvvFDNr-LzXXhLd",&#13;
+        "scope": ["profile", "email"],&#13;
+        "access_headers": {&#13;
+            "User-Agent": "Plone Authomatic Plugin"&#13;
+        }&#13;
+    }&#13;
+}</value>
+  </record>
+  <record name="pas.plugins.authomatic.interfaces.IPasPluginsAuthomaticSettings.secret" interface="pas.plugins.authomatic.interfaces.IPasPluginsAuthomaticSettings" field="secret">
+    <value>KeqiYXTk6b</value>
+  </record>
+  <record name="pas.plugins.authomatic.interfaces.IPasPluginsAuthomaticSettings.userid_factory_name" interface="pas.plugins.authomatic.interfaces.IPasPluginsAuthomaticSettings" field="userid_factory_name">
+    <value>uuid</value>
+  </record>
+
+</registry>
