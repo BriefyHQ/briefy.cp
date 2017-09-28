@@ -41,7 +41,8 @@ accommodation_types = SimpleVocabulary.fromItems(
         ('Hotel', 'hotel'),
         ('Hostel', 'hostel'),
         ('Pension', 'pension'),
-        ('BnB', 'bnb'),
+        ('Bed & Breakfast', 'bnb'),
+        ('Holiday Home', 'holiday_home'),
         ('Apartment / Studio', 'apartment'),
     ]
 )

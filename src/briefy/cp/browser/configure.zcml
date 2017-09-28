@@ -10,6 +10,14 @@
         directory="static"
     />
 
+  <browser:page
+    name="faceted-preview-item"
+    for="zope.interface.Interface"
+    layer="briefy.cp.interfaces.IBriefyPloneLayer"
+    template="preview-item.pt"
+    permission="zope2.View"
+    />
+
   <!-- Login -->
   <browser:page
       class=".authomatic.AuthomaticView"

@@ -19,7 +19,7 @@ class IExternalParterLinkSchema(Interface):
         title=u'Their id',
         required=False
     )
-    url = schema.URI(
+    url = schema.TextLine(
         title=u'URL',
         required=False
     )

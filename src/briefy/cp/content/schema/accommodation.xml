@@ -26,12 +26,17 @@
         <required>False</required>
         <title>Neighbourhood</title>
       </field>
+      <field name="postal_code" type="zope.schema.TextLine">
+        <description>i.e. 10997</description>
+        <required>False</required>
+        <title>Postal Code</title>
+      </field>
       <field name="locality" type="zope.schema.Choice">
         <description/>
         <required>False</required>
         <title>City</title>
         <values>
-          <element key="ber">Berlin</element>
+          <element key="berlin">Berlin</element>
         </values>
       </field>
       <field name="country" type="zope.schema.Choice">
