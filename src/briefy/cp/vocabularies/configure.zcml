@@ -18,5 +18,9 @@
     component=".AccommodationStarsVocabularyFactory"
     name="briefy.cp.vocabularies.AccommodationStars"
     />
+  <utility
+    component=".BerlinSublocalitiesVocabularyFactory"
+    name="briefy.cp.vocabularies.BerlinSublocalities"
+    />
 
 </configure>

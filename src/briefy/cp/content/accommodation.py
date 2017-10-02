@@ -37,7 +37,7 @@ class IRequirementItemSchema(Interface):
         required=True
     )
     description = schema.TextLine(title=u'Comments', required=False)
-    tags = schema.Set(
+    tags = schema.List(
         title=u'Tags',
         required=False,
         value_type=schema.Choice(vocabulary=requirement_item_tags)
@@ -51,3 +51,10 @@ class IAccommodation(IBriefyContent):
 @implementer(IAccommodation)
 class Accommodation(Container):
     """An Accommodation."""
+
+    @property
+    def partners_ids(self):
+        """Return a list of partners for this accommodation."""
+        partners = self.partners
+        partners = partners if partners else []
+        return [p['partner'] for p in partners]

@@ -3,8 +3,14 @@
  <index name="Subject" meta_type="KeywordIndex">
   <indexed_attr value="Subject"/>
  </index>
+ <index name="partners_ids" meta_type="KeywordIndex">
+  <indexed_attr value="partners_ids"/>
+ </index>
  <index name="locality" meta_type="FieldIndex">
   <indexed_attr value="locality"/>
+ </index>
+ <index name="sublocality" meta_type="FieldIndex">
+  <indexed_attr value="sublocality"/>
  </index>
  <index name="country" meta_type="FieldIndex">
   <indexed_attr value="country"/>

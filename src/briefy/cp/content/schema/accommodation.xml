@@ -16,12 +16,12 @@
         <required>False</required>
         <title>Address</title>
       </field>
-      <field name="number" type="zope.schema.TextLine">
+      <field name="street_number" type="zope.schema.TextLine">
         <description>i.e: 32</description>
         <required>False</required>
         <title>Number</title>
       </field>
-      <field name="sub_locality" type="zope.schema.TextLine">
+      <field name="sublocality" type="zope.schema.TextLine">
         <description>i.e. Kreuzberg</description>
         <required>False</required>
         <title>Neighbourhood</title>
@@ -36,7 +36,7 @@
         <required>False</required>
         <title>City</title>
         <values>
-          <element key="berlin">Berlin</element>
+          <element key="Berlin">Berlin</element>
         </values>
       </field>
       <field name="country" type="zope.schema.Choice">
