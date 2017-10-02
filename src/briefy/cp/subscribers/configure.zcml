@@ -1,0 +1,16 @@
+<configure
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n_domain="briefy.cp">
+
+<!--     <subscriber
+        for="Products.PluggableAuthService.interfaces.events.IUserInitialLoginInEvent"
+        handler=".postlogin.first_login_handler"
+        /> -->
+    <subscriber
+        for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
+        handler=".postlogin.first_login_handler"
+        />
+
+</configure>
