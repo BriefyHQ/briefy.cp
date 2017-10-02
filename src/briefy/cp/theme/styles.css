@@ -4899,3 +4899,17 @@ div#oauth-login {
     text-align: center;
     text-decoration: none;
 }
+
+.photoAlbumEntry a {
+  width: 200px;
+}
+
+#right-area {
+  width: 22em;
+}
+#left-area {
+  width: 22em;
+}
+#center-area {
+  margin-left: -22em;
+}

@@ -5,7 +5,7 @@
    <property name="widget">sorting</property>
    <property name="title">Sort on</property>
    <property name="vocabulary"></property>
-   <property name="default">effective(reverse)</property>
+   <property name="default">getObjPositionInParent(reverse)</property>
    <property name="position">left</property>
    <property name="section">default</property>
    <property name="hidden">True</property>
@@ -32,7 +32,7 @@
   <criterion name="c0">
    <property name="widget">resultsperpage</property>
    <property name="title">Results per page</property>
-   <property name="default">15</property>
+   <property name="default">20</property>
    <property name="position">left</property>
    <property name="section">default</property>
    <property name="hidden">True</property>
