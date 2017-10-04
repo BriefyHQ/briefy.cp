@@ -6,6 +6,7 @@ USER root
 COPY ./docker.cfg /plone/instance/docker.cfg
 COPY setup.* *.rst MANIFEST.in /plone/instance/src/briefy.cp/
 COPY src /plone/instance/src/briefy.cp/src
+RUN mkdir -p /home/plone/
 
 RUN chown -R plone:plone /plone /home/plone
 
