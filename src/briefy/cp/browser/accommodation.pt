@@ -18,19 +18,51 @@
 
    <div class="pat-autotoc autotabs" data-pat-autotoc="section:fieldset;levels:legend;">
 
-    <fieldset tal:repeat="group view/groups"
-              tal:attributes="id python:''.join((group.prefix, 'groups.', group.__name__)).replace('.', '-')">
-        <legend tal:content="group/label" />
-        <tal:block tal:repeat="widget group/widgets/values">
-            <tal:widget tal:replace="structure widget/@@ploneform-render-widget"/>
-        </tal:block>
+    <tal:block tal:repeat="group view/groups">
+      <fieldset 
+        tal:condition="python:group.__name__ not in ('external_info')"
+        tal:attributes="id python:''.join((group.prefix, 'groups.', group.__name__)).replace('.', '-')">
+          <legend tal:content="group/label" />
+          <tal:block tal:repeat="widget group/widgets/values">
+              <tal:widget tal:replace="structure widget/@@ploneform-render-widget"/>
+          </tal:block>
+      </fieldset>
+    </tal:block>
+    
+    <fieldset id="form-groups-external_info">
+        <legend i18n:translate="" i18n:domain="plone">Source</legend>
+        <div tal:define="partners context/partners">
+          <table class="listing">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="item partners">
+                <td>
+                  <a tal:condition="item/url" href="${item/url}" target="_blank">
+                    <span tal:content="item/partner">Trivago</span>
+                  </a>
+                  <span  tal:condition="not:item/url" tal:content="item/partner">Trivago</span>
+                </td>
+                <td>
+                  <span tal:content="item/partner_id">1234</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </fieldset>
 
-    <fieldset id="contacts">
+    <fieldset id="form-groups-contacts">
         <legend i18n:translate="" i18n:domain="plone">Contacts</legend>
-        <a href="${context/absolute_url}/++add++contact">
-          <input class="context" type="button" value="New contact">
-        </a>
+        <div>
+          <a href="${context/absolute_url}/++add++contact">
+            <input class="context" type="button" value="New contact">
+          </a>
+        </div>
         <div tal:define="content view/events">
           <table class="listing">
             <thead>
