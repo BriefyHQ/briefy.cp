@@ -143,6 +143,7 @@
 
  <state state_id="accepted" title="Accepted" i18n:attributes="title">
     <description i18n:translate="">Accepted</description>
+    <exit-transition transition_id="schedule"/>
     <permission-map name="Access contents information" acquired="False">
        <permission-role>Manager</permission-role>
        <permission-role>Owner</permission-role>
@@ -173,6 +174,7 @@
 
  <state state_id="scheduled" title="Scheduled" i18n:attributes="title">
     <description i18n:translate="">Scheduled</description>
+    <exit-transition transition_id="deliver"/>
     <permission-map name="Access contents information" acquired="False">
        <permission-role>Manager</permission-role>
        <permission-role>Owner</permission-role>
@@ -286,6 +288,35 @@
      <guard-permission>Review portal content</guard-permission>
    </guard>
   </transition>
+  <transition 
+    transition_id="schedule"
+    new_state="scheduled"
+    title="Scheduled shoot"
+    trigger="USER"
+    before_script=""
+    after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Scheduled shoot.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=schedule" category="workflow" i18n:translate="">Scheduled Shoot</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+  <transition 
+    transition_id="deliver"
+    new_state="delivered"
+    title="Delivered shoot"
+    trigger="USER"
+    before_script=""
+    after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Delivered shoot.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=deliver" category="workflow" i18n:translate="">Delivered Shoot</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+
  <variable variable_id="action" for_catalog="False" for_status="True" update_always="True">
   <description i18n:translate="">Previous transition</description>
   <default>
