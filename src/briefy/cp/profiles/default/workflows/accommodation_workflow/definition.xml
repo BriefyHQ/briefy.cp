@@ -143,6 +143,7 @@
 
  <state state_id="accepted" title="Accepted" i18n:attributes="title">
     <description i18n:translate="">Accepted</description>
+    <exit-transition transition_id="reject"/>
     <exit-transition transition_id="schedule"/>
     <permission-map name="Access contents information" acquired="False">
        <permission-role>Manager</permission-role>
@@ -175,6 +176,7 @@
  <state state_id="scheduled" title="Scheduled" i18n:attributes="title">
     <description i18n:translate="">Scheduled</description>
     <exit-transition transition_id="deliver"/>
+    <exit-transition transition_id="reject"/>
     <permission-map name="Access contents information" acquired="False">
        <permission-role>Manager</permission-role>
        <permission-role>Owner</permission-role>
