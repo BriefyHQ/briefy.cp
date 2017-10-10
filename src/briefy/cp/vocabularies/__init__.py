@@ -21,6 +21,12 @@ requirement_item_tags = SimpleVocabulary.fromItems(
         ('Reception', 'reception'),
         ('Lobby', 'lobby'),
         ('Exterior', 'exterior'),
+        ('Close-ups', 'closeups'),
+        ('Food / Drinks', 'food_drinks'),
+        ('Kitchen', 'kitchen'),
+        ('Living Room', 'living_room'),
+        ('Terrace / Balcony', 'terrace_balcony'),
+        ('Staircase', 'staircase'),
     ]
 )
 
