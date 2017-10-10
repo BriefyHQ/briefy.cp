@@ -15,6 +15,8 @@
  <state state_id="not_started" title="Not Started" i18n:attributes="title">
     <description i18n:translate="">Not started</description>
     <exit-transition transition_id="start"/>
+    <exit-transition transition_id="close"/>
+    <exit-transition transition_id="temp_close"/>
     <permission-map name="Access contents information" acquired="False">
        <permission-role>Manager</permission-role>
        <permission-role>Owner</permission-role>
@@ -48,6 +50,8 @@
     <exit-transition transition_id="skip"/>
     <exit-transition transition_id="reject"/>
     <exit-transition transition_id="accept"/>
+    <exit-transition transition_id="close"/>
+    <exit-transition transition_id="temp_close"/>
     <permission-map name="Access contents information" acquired="False">
        <permission-role>Manager</permission-role>
        <permission-role>Owner</permission-role>
@@ -81,6 +85,8 @@
     <exit-transition transition_id="start"/>
     <exit-transition transition_id="reject"/>
     <exit-transition transition_id="accept"/>
+    <exit-transition transition_id="close"/>
+    <exit-transition transition_id="temp_close"/>
     <permission-map name="Access contents information" acquired="False">
        <permission-role>Manager</permission-role>
        <permission-role>Owner</permission-role>
@@ -235,6 +241,72 @@
     </permission-map>
  </state>
 
+ <state state_id="temp_closed" title="Temporary Closed" i18n:attributes="title">
+    <description i18n:translate="">Temporary Closed</description>
+    <exit-transition transition_id="start"/>
+    <exit-transition transition_id="skip"/>
+    <exit-transition transition_id="close"/>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
+ <state state_id="closed" title="Closed" i18n:attributes="title">
+    <description i18n:translate="">Accommodation is out of business</description>
+    <exit-transition transition_id="start"/>
+    <exit-transition transition_id="skip"/>
+    <exit-transition transition_id="temp_close"/>
+    <permission-map name="Access contents information" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="Modify portal content" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+    <permission-map name="View" acquired="False">
+       <permission-role>Manager</permission-role>
+       <permission-role>Owner</permission-role>
+       <permission-role>Editor</permission-role>
+       <permission-role>Reader</permission-role>
+       <permission-role>Contributor</permission-role>
+       <permission-role>Reviewer</permission-role>
+       <permission-role>Site Administrator</permission-role>
+    </permission-map>
+ </state>
+
   <transition 
     transition_id="start"
     new_state="in_progress"
@@ -314,6 +386,34 @@
     i18n:attributes="title">
    <description i18n:translate="">Delivered shoot.</description>
    <action url="%(content_url)s/content_status_modify?workflow_action=deliver" category="workflow" i18n:translate="">Delivered Shoot</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+  <transition 
+    transition_id="temp_close"
+    new_state="temp_closed"
+    title="Temporary close Accommodation"
+    trigger="USER"
+    before_script=""
+    after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Temporary close Accommodation.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=temp_close" category="workflow" i18n:translate="">Temporary close Accommodation</action>
+   <guard>
+     <guard-permission>Review portal content</guard-permission>
+   </guard>
+  </transition>
+  <transition 
+    transition_id="close"
+    new_state="closed"
+    title="Close Accommodation"
+    trigger="USER"
+    before_script=""
+    after_script=""
+    i18n:attributes="title">
+   <description i18n:translate="">Close Accommodation.</description>
+   <action url="%(content_url)s/content_status_modify?workflow_action=close" category="workflow" i18n:translate="">Close Accommodation</action>
    <guard>
      <guard-permission>Review portal content</guard-permission>
    </guard>
