@@ -17,6 +17,5 @@ Branch       Status
 ============ ========================================================================================================================
 
 
-
 .. _`master`: https://github.com/BriefyHQ/briefy.cp/tree/master
 .. _`develop`: https://github.com/BriefyHQ/briefy.cp/tree/develop
