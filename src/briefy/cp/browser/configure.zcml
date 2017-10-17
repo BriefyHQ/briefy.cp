@@ -45,4 +45,14 @@
       layer="briefy.cp.interfaces.IBriefyPloneLayer"
       />
 
+
+  <!-- Reports -->
+  <browser:page
+      for="briefy.cp.content.city.ICity"
+      name="export.csv"
+      class=".city.CSVExport"
+      permission="zope2.View"
+      layer="briefy.cp.interfaces.IBriefyPloneLayer"
+      />
+
 </configure>
