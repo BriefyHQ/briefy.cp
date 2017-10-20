@@ -225,3 +225,25 @@ class BerlinSublocalitiesVocabulary(object):
 
 
 BerlinSublocalitiesVocabularyFactory = BerlinSublocalitiesVocabulary()  # noqa
+
+
+gallery_quality = SimpleVocabulary.fromItems(
+    [
+        ('', '--'),
+        ('Great', 'Great'),
+        ('Good', 'Good'),
+        ('Ok', 'Ok'),
+        ('Bad', 'Bad'),
+    ]
+)
+
+@implementer(IVocabularyFactory)
+class AccommodationGalleryVocabulary(object):
+    """Accommodation Gallery quality."""
+
+    def __call__(self, context):
+
+        return gallery_quality
+
+
+AccommodationGalleryVocabularyFactory = AccommodationGalleryVocabulary()  # noqa

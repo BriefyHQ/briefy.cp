@@ -115,5 +115,13 @@
         <form:widget type="collective.z3cform.datagridfield.DataGridFieldFactory"/>
       </field>
     </fieldset>
+    <fieldset name="gallery_info" label="Image Gallery" description="Image gallery">
+      <field name="gallery_quality" type="zope.schema.Choice">
+        <description>Categorise how good an image gallery is</description>
+        <required>False</required>
+        <title>Quality</title>
+        <vocabulary>briefy.cp.vocabularies.GalleryQuality</vocabulary>
+      </field>
+    </fieldset>
   </schema>
 </model>

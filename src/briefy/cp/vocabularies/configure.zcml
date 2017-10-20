@@ -22,5 +22,9 @@
     component=".BerlinSublocalitiesVocabularyFactory"
     name="briefy.cp.vocabularies.BerlinSublocalities"
     />
+  <utility
+    component=".AccommodationGalleryVocabularyFactory"
+    name="briefy.cp.vocabularies.GalleryQuality"
+    />
 
 </configure>

@@ -21,4 +21,7 @@
  <index name="stars" meta_type="FieldIndex">
   <indexed_attr value="stars"/>
  </index>
+ <index name="gallery_quality" meta_type="FieldIndex">
+  <indexed_attr value="gallery_quality"/>
+ </index>
 </object>
