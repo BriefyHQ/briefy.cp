@@ -229,11 +229,13 @@ BerlinSublocalitiesVocabularyFactory = BerlinSublocalitiesVocabulary()  # noqa
 
 gallery_quality = SimpleVocabulary.fromItems(
     [
-        ('', '--'),
-        ('Great', 'Great'),
-        ('Good', 'Good'),
-        ('Ok', 'Ok'),
-        ('Bad', 'Bad'),
+        ('--', ''),
+        ('5', '5'),
+        ('4', '4'),
+        ('3', '3'),
+        ('2', '2'),
+        ('1', '1'),
+        ('0', '0'),
     ]
 )
 
