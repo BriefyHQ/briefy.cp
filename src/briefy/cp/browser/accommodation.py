@@ -13,10 +13,10 @@ class AccommodationView(DefaultView):
             context=self.context,
             portal_type='contact',
             depth=1,
-            sort_on='getObjPositionInParent',
+            sort_on='start',
             sort_order='reverse'
         )
-        return [o.getObject() for o in all_content]
+        return all_content
 
     def getUserNameById(self, member_id):
         """Return the author object for this id."""

@@ -75,15 +75,15 @@
             <tbody>
               <tr tal:repeat="item content">
                 <td>
-                  <a href="${item/absolute_url}">
-                    <span tal:content="item/title">Room 123</span>
+                  <a href="${item/getURL}">
+                    <span tal:content="item/Title">Room 123</span>
                   </a>
                 </td>
                 <td>
-                  <span tal:content="python:view.toLocalizedTime(item.start,long_format=1)"></span>
+                  <span tal:content="python:view.toLocalizedTime(item.start, long_format=1)"></span>
                 </td>
                 <td>
-                  <span tal:content="python:view.getUserNameById(item.Creator())"></span>
+                  <span tal:content="python:view.getUserNameById(item.Creator)"></span>
                 </td>
               </tr>
             </tbody>
