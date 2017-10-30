@@ -12,4 +12,5 @@ RUN chown -R plone:plone /plone /home/plone
 
 USER plone
 
+RUN pip install -r requirements.txt
 RUN bin/buildout -Nc docker.cfg
